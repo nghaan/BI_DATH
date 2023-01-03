@@ -1,0 +1,1244 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/22/2022 8:30:15 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-FGOPR7B"
+  DTS:CreatorName="DESKTOP-FGOPR7B\DELL"
+  DTS:DTSID="{C753A26D-6239-4BC1-8FFB-78FD30BC294A}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.845.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{F865BC4A-B9C1-49F7-93EA-1BC1565A5ED9}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[case_report]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{5D229D15-D659-424F-8443-4FB543AA9DE6}"
+      DTS:ObjectName="case_report">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\OneDrive\Máy tính\HT trí tuệ kinh doanh\Đồ án TH\Datasource\Cases Report.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Outcome"
+              DTS:DTSID="{46E04266-0632-45E2-983C-6F0BA479381A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age"
+              DTS:DTSID="{03BDC6D7-4CF1-496C-A011-38F42A0296DF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{485CCCE6-D5D7-4903-9465-4D27447CD183}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Reporting PHU"
+              DTS:DTSID="{0BF0453B-215B-4C48-B892-72DA4BC25090}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SpecimenDate"
+              DTS:DTSID="{5AC0AB28-D81A-436E-A750-4A936649AD0B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CaseReported Date"
+              DTS:DTSID="{CE3198DF-D0ED-4D2E-BC29-C0EE6D067166}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PHUCity"
+              DTS:DTSID="{FAFCF19F-5CD2-4EEA-ADBB-4C6248695ACB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TestReported Date"
+              DTS:DTSID="{A61F2B6D-34B1-4431-BFDF-93B6C9C0979D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CaseAcquisition info"
+              DTS:DTSID="{76A26A86-16FB-4A30-966D-D4CCD7AAE820}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AccurateEpisode Dt"
+              DTS:DTSID="{E6708443-783F-4643-BAD3-16ADF12063FE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PHU Address"
+              DTS:DTSID="{1A3B33CB-076A-4468-8552-D6888E748B30}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PHU Website"
+              DTS:DTSID="{5056526F-4E9E-47D8-BFB6-99F45C985A68}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OutbreakRelated"
+              DTS:DTSID="{A427DE4C-97E6-44C5-8409-FA96AC131D47}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PHU Latitude"
+              DTS:DTSID="{35B74AAA-7CC5-4594-8155-AEFC91563AAF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PHU Longitude"
+              DTS:DTSID="{7BB439FA-E1D4-4674-BAA6-644BB53B8713}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PHU Postal Code"
+              DTS:DTSID="{19F30B72-B231-4DEE-AD18-C4CDC443212B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Compiled_COVID-19_Case_Details_(Canada)]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{125EEFAE-7D26-43F9-85DD-1D474DFC0A93}"
+      DTS:ObjectName="Compiled_COVID-19_Case_Details_(Canada)">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\OneDrive\Máy tính\HT trí tuệ kinh doanh\Đồ án TH\Datasource\Compiled_COVID-19_Case_Details_(Canada).csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ï»¿ObjectId"
+              DTS:DTSID="{810137DA-246E-4FCE-A5BA-5C7F86176930}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="row_id"
+              DTS:DTSID="{9327AD75-BE69-4C70-9587-B1D0D51C2B7C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="date_reported"
+              DTS:DTSID="{72AF7532-DE29-4AD2-9713-8C845126B18E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="150"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="health_region"
+              DTS:DTSID="{E677D6F3-C2A3-4897-8A8E-67AB56809E40}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="age_group"
+              DTS:DTSID="{2AD77BD0-9F97-47D5-96AB-1A29687D67CA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="gender"
+              DTS:DTSID="{6D25B659-A561-46C5-9652-93382BCD9B4F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="exposure"
+              DTS:DTSID="{5E29E0BA-12BB-4C3D-822F-9769024C80F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="case_status"
+              DTS:DTSID="{FECA26D2-8585-4FFD-BC31-F884E410BD6B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="province"
+              DTS:DTSID="{FE0ABE2F-841C-43D5-9EE1-9CB5F1784E0D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.DATH_Metadata]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{776D1CB1-384C-42F1-841A-3C1EC01B0C46}"
+      DTS:ObjectName="LocalHost.DATH_Metadata">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=DATH_Metadata;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{776D1CB1-384C-42F1-841A-3C1EC01B0C46}LocalHost.DATH_Metadata;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.DATH_Source]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{61AD69B0-A168-45A4-98CD-8DBD43BDE105}"
+      DTS:ObjectName="LocalHost.DATH_Source">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=DATH_Source;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{61AD69B0-A168-45A4-98CD-8DBD43BDE105}LocalHost.DATH_Source;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.DATH_Stage]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{62DD255B-03FA-4C01-B44B-4D6A9F78972C}"
+      DTS:ObjectName="LocalHost.DATH_Stage">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=DATH_Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{62DD255B-03FA-4C01-B44B-4D6A9F78972C}LocalHost.DATH_Stage;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ongoing_outbreaks_phu]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{D5E430C1-1B36-40E8-B8BE-C98D5EAC32EA}"
+      DTS:ObjectName="ongoing_outbreaks_phu">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\OneDrive\Máy tính\HT trí tuệ kinh doanh\Đồ án TH\Datasource\ongoing_outbreaks_phu.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="date"
+              DTS:DTSID="{0BE248ED-A4F1-4048-A2CB-56306DD6C320}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="phu_num"
+              DTS:DTSID="{89AC13BF-E473-403C-9E3F-DCC3EF8B701E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="outbreak_group"
+              DTS:DTSID="{ABFA581D-DCED-4FBF-B0A8-04509AD04A13}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="number_ongoing_outbreaks"
+              DTS:DTSID="{569A5E4F-3EE8-4745-B915-96DA3BD21E6A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Public health unit]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{F67110A1-BFC4-41FC-86E3-31B96CB2B3BE}"
+      DTS:ObjectName="Public health unit">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\OneDrive\Máy tính\HT trí tuệ kinh doanh\Đồ án TH\Datasource\Public health unit.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PHU_ID"
+              DTS:DTSID="{92AD02FA-9A94-4651-ACE4-9E6EFDB5E6A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Reporting_PHU"
+              DTS:DTSID="{E45A0861-6C5F-44E0-8011-60C2B5F82215}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Reporting_PHU_Address"
+              DTS:DTSID="{442490FC-9FDD-454E-9A31-7F8487D9A354}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Reporting_PHU_City"
+              DTS:DTSID="{A112D05F-1022-423D-85D8-92B61E5F7487}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Reporting_PHU_Postal_Code"
+              DTS:DTSID="{A7A121E4-985C-4E4C-AAA3-4445E07FBB9C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Reporting_PHU_Website"
+              DTS:DTSID="{FC090B39-DD16-4CC0-B2B3-3E82C1E43EAE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Reporting_PHU_Latitude"
+              DTS:DTSID="{8459F827-E524-41CF-B67E-CE27E1AA8579}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Reporting_PHU_Longitude"
+              DTS:DTSID="{EB80F561-474E-4D23-8DAA-78B3194E9EC4}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Public Health Units GROUP]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4BFD7EB0-48ED-4507-AEA8-3A1BC3D66157}"
+      DTS:ObjectName="Public Health Units GROUP">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\OneDrive\Máy tính\HT trí tuệ kinh doanh\Đồ án TH\Datasource\Public Health Units GROUP.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PHU_Group"
+              DTS:DTSID="{3073D1F3-21CC-4EF8-8D81-117FA1959EC8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PHU_City"
+              DTS:DTSID="{642FA005-A818-4008-86AC-995C054716F4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PHU_region"
+              DTS:DTSID="{BE63BC75-DC4C-40A6-93B4-F951C0BD16FE}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[vaccines_by_age_phu]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9F5EE5C5-58FF-416F-823C-3AB0517E807C}"
+      DTS:ObjectName="vaccines_by_age_phu">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\OneDrive\Máy tính\HT trí tuệ kinh doanh\Đồ án TH\Datasource\vaccines_by_age_phu.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{27A30D57-C6FD-42EE-AB75-776FE7EBC6B1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PHU ID"
+              DTS:DTSID="{54B91B93-302B-4B21-9CBD-7FEEF3766F75}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Agegroup"
+              DTS:DTSID="{887C6837-4E18-45EA-A839-DE48B87EE853}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="At least one dose_cumulative"
+              DTS:DTSID="{AA08598D-A037-473A-8CE3-26F081CEA619}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Second_dose_cumulative"
+              DTS:DTSID="{684B11AC-623B-4A63-AC8C-1B5206626469}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fully_vaccinated_cumulative"
+              DTS:DTSID="{B0787453-D0A7-456F-91E4-9D3B9854F971}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="third_dose_cumulative"
+              DTS:DTSID="{C99D03DD-8026-47BB-8C6F-423F3236249E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Compiled_COVID-19_Case_Details_(Canada)"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{71B58A9B-A56F-4392-B78C-2D987AA19A2D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Compiled_COVID-19_Case_Details_(Canada)"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada)"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Compiled_COVID-19_Case_Details_(Canada)"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Compiled_COVID-19_Case_Details_(Canada)]"
+                  connectionManagerRefId="Package.ConnectionManagers[Compiled_COVID-19_Case_Details_(Canada)]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[row_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].ExternalColumns[row_id]"
+                      length="50"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[row_id]"
+                      name="row_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[date_reported]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].ExternalColumns[date_reported]"
+                      length="50"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[date_reported]"
+                      name="date_reported"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[health_region]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].ExternalColumns[health_region]"
+                      length="150"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[health_region]"
+                      name="health_region"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[age_group]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].ExternalColumns[age_group]"
+                      length="50"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[age_group]"
+                      name="age_group"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].ExternalColumns[gender]"
+                      length="50"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[gender]"
+                      name="gender"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[exposure]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].ExternalColumns[exposure]"
+                      length="50"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[exposure]"
+                      name="exposure"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[case_status]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].ExternalColumns[case_status]"
+                      length="50"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[case_status]"
+                      name="case_status"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[province]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].ExternalColumns[province]"
+                      length="50"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[province]"
+                      name="province"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[ObjectId]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].ExternalColumns[ï»¿ObjectId]"
+                      length="50"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[ObjectId]"
+                      name="ObjectId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].ExternalColumns[row_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="row_id" />
+                    <externalMetadataColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].ExternalColumns[date_reported]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="date_reported" />
+                    <externalMetadataColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].ExternalColumns[health_region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      name="health_region" />
+                    <externalMetadataColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].ExternalColumns[age_group]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="age_group" />
+                    <externalMetadataColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].ExternalColumns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="gender" />
+                    <externalMetadataColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].ExternalColumns[exposure]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="exposure" />
+                    <externalMetadataColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].ExternalColumns[case_status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="case_status" />
+                    <externalMetadataColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].ExternalColumns[province]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="province" />
+                    <externalMetadataColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].ExternalColumns[ï»¿ObjectId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ï»¿ObjectId" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Compiled_COVID-19_Case_Details_(Canada) Destination 1"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Compiled_COVID-19_Case_Details_(Canada) Destination 1]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.DATH_Source]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.DATH_Source]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].Columns[ObjectId]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ObjectId"
+                      externalMetadataColumnId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ObjectId]"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[ObjectId]" />
+                    <inputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].Columns[row_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="row_id"
+                      externalMetadataColumnId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[row_id]"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[row_id]" />
+                    <inputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].Columns[date_reported]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="date_reported"
+                      externalMetadataColumnId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[date_reported]"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[date_reported]" />
+                    <inputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].Columns[health_region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="150"
+                      cachedName="health_region"
+                      externalMetadataColumnId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[health_region]"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[health_region]" />
+                    <inputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].Columns[age_group]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="age_group"
+                      externalMetadataColumnId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[age_group]"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[age_group]" />
+                    <inputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].Columns[gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="gender"
+                      externalMetadataColumnId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[gender]" />
+                    <inputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].Columns[exposure]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="exposure"
+                      externalMetadataColumnId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[exposure]"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[exposure]" />
+                    <inputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].Columns[case_status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="case_status"
+                      externalMetadataColumnId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[case_status]"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[case_status]" />
+                    <inputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].Columns[province]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="province"
+                      externalMetadataColumnId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[province]"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output].Columns[province]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ObjectId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ObjectId" />
+                    <externalMetadataColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[row_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="row_id" />
+                    <externalMetadataColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[date_reported]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="date_reported" />
+                    <externalMetadataColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[health_region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      name="health_region" />
+                    <externalMetadataColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[age_group]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="age_group" />
+                    <externalMetadataColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="gender" />
+                    <externalMetadataColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[exposure]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="exposure" />
+                    <externalMetadataColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[case_status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="case_status" />
+                    <externalMetadataColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[province]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="province" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Compiled_COVID-19_Case_Details_(Canada).Paths[Flat File Source Output]"
+              endId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada).Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="290,42"
+          Id="Package\Compiled_COVID-19_Case_Details_(Canada)"
+          TopLeft="439.5,172.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Compiled_COVID-19_Case_Details_(Canada)">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="355,42"
+          Id="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1"
+          TopLeft="367.5,149.5" />
+        <NodeLayout
+          Size="290,42"
+          Id="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada)"
+          TopLeft="392.5,55.5" />
+        <EdgeLayout
+          Id="Package\Compiled_COVID-19_Case_Details_(Canada).Paths[Flat File Source Output]"
+          TopLeft="541.25,97.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52"
+              Start="0,0"
+              End="0,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Compiled_COVID-19_Case_Details_(Canada)\Compiled_COVID-19_Case_Details_(Canada) Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
