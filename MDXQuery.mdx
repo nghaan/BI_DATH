@@ -1,0 +1,103 @@
+﻿-- 1. Thống kê số ca nhiễm, số ca tử vong, số ca phục hồi của dịch Covid-19 theo từng PHU trong từng năm
+select {[Dim Status].[Status], [Dim Status].[Status].&[Deceased], [Dim Status].[Status].&[Recovered]} on columns, 
+non empty
+except(crossjoin([Dim Phu].[PHU Name].[PHU Name], [Dim Date].[Year].[Year] ),
+crossjoin([Dim Phu].[PHU Name].[All].UNKNOWNMEMBER, [Dim Date].[Year].[Year])) on rows
+from [Cub_Case]
+where [Measures].[Fact Case Count];
+
+-- 2. Thống kê Mức Độ Nghiêm Trọng của dịch Covid-19 theo PHU và theo các Quý trong từng năm.
+with member [Measures].[Serious] as 
+case 
+	when (([Measures].[Fact Case Count], [Dim Status].[Status].&[Deceased])/([Measures].[Fact Case Count], [Dim Status].[Status])>= 0.04)  then 'Very Serious'
+	when (([Measures].[Fact Case Count], [Dim Status].[Status].&[Deceased])/([Measures].[Fact Case Count], [Dim Status].[Status]) >= 0.02)  then 'Serious'
+	else 'No Serious'
+end
+member [Measures].[Percent Decreased] as (([Measures].[Fact Case Count], [Dim Status].[Status].&[Deceased])/([Measures].[Fact Case Count], [Dim Status].[Status]))*100
+member [Measures].[Deceased] as ([Measures].[Fact Case Count], [Dim Status].[Status].&[Deceased])
+member [Measures].[All] as ([Measures].[Fact Case Count], [Dim Status].[Status])
+SELECT {[Measures].[All], [Measures].[Deceased], [Measures].[Percent Decreased], [Measures].[Serious]}  on columns, 
+non empty 
+except (
+(except(crossjoin([Dim Phu].[PHU Name].[PHU Name], [Dim Date].[Quarter Name].[Quarter Name]), 
+crossjoin([Dim Phu].[PHU Name].[All].UNKNOWNMEMBER, [Dim Date].[Quarter Name].[Quarter Name]))), 
+crossjoin([Dim Phu].[PHU Name].[PHU Name],[Dim Date].[Quarter Name].UNKNOWNMEMBER)) on rows
+from [Cub_Case];
+
+-- 3. Thống kê tổng số người tử vong theo Giới Tính và Nhóm Tuổi theo các năm.
+select [Dim Status].[Status].&[Deceased] on columns, 
+crossjoin (crossjoin ([Dim Gender Age].[Gender].[Gender], [Dim Gender Age].[Age].[Age]), [Dim Date].[Year].[Year]) on rows
+from [Cub_Case]
+where [Measures].[Fact Case Count];
+
+
+-- 4.  Thống kê số ca nhiễm, tử vong theo Mức Độ Nghiêm Trọng theo Ngày Trong Tháng của các năm.
+with member [Measures].[Serious] as 
+case 
+	when (([Measures].[Fact Case Count], [Dim Status].[Status].&[Deceased])/([Measures].[Fact Case Count], [Dim Status].[Status])>= 0.04)  then 'Very Serious'
+	when (([Measures].[Fact Case Count], [Dim Status].[Status].&[Deceased])/([Measures].[Fact Case Count], [Dim Status].[Status]) >= 0.02)  then 'Serious'
+	else 'No Serious'
+end
+
+member [Measures].[Deceased] as ([Measures].[Fact Case Count], [Dim Status].[Status].&[Deceased])
+member [Measures].[All] as ([Measures].[Fact Case Count], [Dim Status].[Status])
+SELECT {[Measures].[All], [Measures].[Deceased], [Measures].[Serious]}  on columns, 
+[Dim Date].[Date].[Date] on rows
+from [Cub_Case];
+
+-- 5. Thống kê số ca nhiễm, tử vong theo Mức Độ Nghiêm Trọng, khu vực (PHU_Group, City), và số người đã được tiêm vaccin trong các năm.
+with member [Measures].[Serious] as 
+case 
+	when (([Measures].[Fact Case Count], [Dim Status 1].[Status].&[Deceased])/([Measures].[Fact Case Count], [Dim Status 1].[Status])>= 0.04)  then 'Very Serious'
+	when (([Measures].[Fact Case Count], [Dim Status 1].[Status].&[Deceased])/([Measures].[Fact Case Count], [Dim Status 1].[Status]) >= 0.02)  then 'Serious'
+	else 'No Serious'
+end
+
+member [Measures].[Deceased] as ([Measures].[Fact Case Count], [Dim Status 1].[Status].&[Deceased])
+member [Measures].[All] as ([Measures].[Fact Case Count], [Dim Status 1].[Status])
+SELECT {[Measures].[All], [Measures].[Deceased], [Measures].[Serious],[Measures].[Vacinated Num]} on columns, 
+crossjoin (crossjoin ([Dim Phu 1].[PHU Group Name].[PHU Group Name], [Dim Phu 1].[PHU City Name].[PHU City Name]), [Dim Year].[Year].[Year]) on rows
+from [Cub_5];
+
+-- 6. Thống kê số ca nhiễm theo Mức Độ Nghiêm Trọng, nhóm bùng phát của từng khu vực trong các năm
+with member [Measures].[Serious] as 
+case 
+	when (([Measures].[Fact Case Count], [Dim Status].[Status].&[Deceased])/([Measures].[Fact Case Count], [Dim Status].[Status])>= 0.04)  then 'Very Serious'
+	when (([Measures].[Fact Case Count], [Dim Status].[Status].&[Deceased])/([Measures].[Fact Case Count], [Dim Status].[Status]) >= 0.02)  then 'Serious'
+	else 'No Serious'
+end
+
+member [Measures].[All] as ([Measures].[Fact Case Count], [Dim Status].[Status])
+SELECT {[Measures].[All], [Measures].[Serious]}  on columns, 
+crossjoin(crossjoin(except(except(crossjoin ([Dim Outbreak Group].[Outbreak Group Name].[Outbreak Group Name], [Dim Date].[Year].[Year]), crossjoin ([Dim Outbreak Group].[Outbreak Group Name].[Outbreak Group Name],[Dim Date].[Year].[All].UNKNOWNMEMBER)), crossjoin ([Dim Outbreak Group].[Outbreak Group Name].[All].UNKNOWNMEMBER, [Dim Date].[Year].[Year])), [Dim Phu].[PHU Group Name].[PHU Group Name]),[Dim Phu].[PHU City Name].[PHU City Name])  on rows
+from [Cub_Case];
+
+--7. Sinh viên tự thiết kế những bảng thống kê khác để có thêm nhiều chiều đánh giá số ca nhiễm và tử vong ở Ontario.
+-- 7.1. Thống kê số ca nhiễm, ca tử vong theo phơi nhiễm tại các PHU theo các năm ở Ontario
+select non empty {[Dim Status].[Status], [Dim Status].[Status].&[Deceased]} on columns, 
+non empty ([Dim Province].[Province].&[Ontario]*([Dim Phu].[PHU Name].[PHU Name]* [Dim Exposure].[Exposure].[Exposure]))on rows
+from [Cub_Case]
+where [Measures].[Fact Case Count];
+
+-- 7.2. Thống kê ca nhiễm, ca tử vong tại PHU Group, PHU City và PHU
+select {[Dim Status].[Status], [Dim Status].[Status].&[Deceased]} on columns, 
+([Dim Phu].[PHU Group Name].[PHU Group Name]*([Dim Phu].[PHU City Name].[PHU City Name]*[Dim Phu].[PHU Name].[PHU Name])) on rows
+from [Cub_Case]
+where [Measures].[Fact Case Count];
+
+-- 7.3. Tỉ lệ hồi phục và tử vong ở các PHU trong mỗi năm
+with 
+member [Measures].[Percent Decreased] 
+as (([Measures].[Fact Case Count],[Dim Status].[Status].&[Deceased])/([Measures].[Fact Case Count], [Dim Status].[Status]))*100
+member [Measures].[Percent Recovered] 
+as (([Measures].[Fact Case Count],[Dim Status].[Status].&[Recovered])/([Measures].[Fact Case Count], [Dim Status].[Status]))*100
+SELECT {[Measures].[Percent Decreased], [Measures].[Percent Recovered]}  on columns, 
+[Dim Phu].[PHU Name].[PHU Name] on rows
+from [Cub_Case];
+
+
+-- Regional map
+select {[Dim Status].[Status], [Dim Status].[Status].&[Deceased]} on columns, 
+crossjoin([Dim Province].[Province].[Province], [Dim Date].[Year].[Year]) on rows
+from [Cub_Case]
+where [Measures].[Fact Case Count]
